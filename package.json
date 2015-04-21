@@ -7,14 +7,13 @@
     "name": "Immutable-Harmony"
   },
   "contributors":[{
-      "name": "Clark Feusier",
-      "email": "clark.feusier@hackreactor.com"
-    },
-    {
-      "name": "Sze-Hung Daniel Tsui",
-      "email": "daniel.tsui@hackreactor.com"
-    }
-    ],
+    "name": "Clark Feusier",
+    "email": "clark.feusier@hackreactor.com"
+  },
+  {
+    "name": "Sze-Hung Daniel Tsui",
+    "email": "daniel.tsui@hackreactor.com"
+  }],
   "repository": {
     "type": "git",
     "url": "git://github.com/immutable-harmony/ih.git"
@@ -22,34 +21,13 @@
   "bugs": {
     "url": "https://github.com/immutable-harmony/ih/issues"
   },
-  // "main": "dist/immutable.js",
-  // "scripts": {
-  //   "test": "./resources/node_test.sh",
-  //   "perf": "node ./resources/bench.js"
-  // },
-  // "jest": {
-  //   "scriptPreprocessor": "resources/jestPreprocessor.js",
-  //   "testFileExtensions": [
-  //     "js",
-  //     "ts"
-  //   ],
-  //   "persistModuleRegistryBetweenSpecs": true
-  // },
   "devDependencies": {
-    // "es6-transpiler": "^0.7.18",
-    // "6to5": "3.6.5",
-    "traceur": "0.0.88"
+    "traceur": "0.0.88",
+    "immutable": "3.7.2"
   },
   "engines": {
     "node": ">=0.8.0"
   },
-  // "files": [
-  //   "dist",
-  //   "contrib",
-  //   "README.md",
-  //   "LICENSE",
-  //   "PATENTS"
-  // ],
   "keywords": [
     "immutable",
     "persistent",
