@@ -6,14 +6,16 @@
   "author": {
     "name": "Immutable-Harmony"
   },
-  "contributors":[{
-    "name": "Clark Feusier",
-    "email": "clark.feusier@hackreactor.com"
-  },
-  {
-    "name": "Sze-Hung Daniel Tsui",
-    "email": "daniel.tsui@hackreactor.com"
-  }],
+  "contributors": [
+    {
+      "name": "Clark Feusier",
+      "email": "clark.feusier@hackreactor.com"
+    },
+    {
+      "name": "Sze-Hung Daniel Tsui",
+      "email": "daniel.tsui@hackreactor.com"
+    }
+  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/immutable-harmony/ih.git"
@@ -22,20 +24,26 @@
     "url": "https://github.com/immutable-harmony/ih/issues"
   },
   "devDependencies": {
+    "babel": "^4.6.0",
+    "babel-jest": "*",
+    "core-js": "^0.6.0",
     "immutable": "3.7.2",
-    "babel":"^4.6.0",
-    "core-js":"^0.6.0",
-    "babel-jest":"*",
-    "jest-cli":"*"
-    // "intern":"*"
+    "jest-cli": "^0.4.0"
   },
   "scripts": {
     "test": "jest"
   },
   "jest": {
-    "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
-    "testFileExtensions": ["es6", "js"],
-    "moduleFileExtensions": ["js", "json", "es6"]
+    "scriptPreprocessor": "node_modules/babel-jest",
+    "testFileExtensions": [
+      "es6",
+      "js"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "es6"
+    ]
   },
   "engines": {
     "node": ">=0.8.0"
