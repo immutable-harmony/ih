@@ -22,8 +22,12 @@
     "url": "https://github.com/immutable-harmony/ih/issues"
   },
   "devDependencies": {
-    "babel-core": "5.1.11",
-    "immutable": "3.7.2"
+    "immutable": "3.7.2",
+    "babel":"^4.6.0",
+    "core-js":"^0.6.0",
+    "babel-jest":"*",
+    "jest-cli":"*"
+    // "intern":"*"
   },
   "engines": {
     "node": ">=0.8.0"
