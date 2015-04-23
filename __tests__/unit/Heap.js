@@ -1,10 +1,12 @@
 jest.dontMock('../../src/Heap.es6');
+let Heap = require('../../src/Heap.es6');
 
-describe('Person', function() {
- it('adds 1 + 2 to equal 3', function() {
-   var Person = require('../../src/Heap.es6');
-   var newPerson = new Person('bob');
-   expect(newPerson.sayHello()).toBe("Hello bob!");
-   expect(newPerson.sayHello()).toNotBe("Hello bob2!");
- });
+describe('Heap', () => {
+
+  describe('class Properties', () => {
+    it('has a constructor', ()=>{
+      let newHeap = new Heap();
+      expect(!!newHeap).toBe(true);
+    })
+  });
 });
