@@ -1,4 +1,6 @@
 //source: npm heap
+jasmine.verbose = true;
+
 //let size = Symbol();
 //Symbol...?
 jest.dontMock('../../src/Heap.es6');
@@ -10,15 +12,16 @@ describe('Heap', () => {
     let h = new Heap();
     let i = new Heap();
 
-    it('inserts/size', ()=>{
+    it('starts with size 0, and is empty', ()=>{
+      expect(i.isEmpty()).toBe(true);
       expect(h.size).toBe(0);
-      h.push(1);
-      expect(h.size).toBe(1);
+      console.log('done');
     })
 
-    it('isEmpty', ()=>{
+    it('pushes elements, tracking size and emptiness', ()=>{
+      h.push(1);
+      expect(h.size).toBe(1);
       expect(h.isEmpty()).toBe(false);
-      expect(i.isEmpty()).toBe(true);
     })
 
     it('peeks-max', ()=>{
@@ -59,7 +62,7 @@ describe('Heap', () => {
     it('constructor', ()=>{
       let h = new Heap();
       expect(!!h).toBe(true);
-      expect(h.empty()).toBe(true));
+      expect(h.empty()).toBe(true);
       expect(h.size).toBe(0);
       expect(h.peek()).toBe(undefined);
     })
@@ -68,7 +71,7 @@ describe('Heap', () => {
       h.heapify([1,2,3,4,5,6]);
       expect(h.size).toBe(6)
       expect(h.peek()).toBe(1);
-      expect(h.empty()).toBe(false));
+      expect(h.empty()).toBe(false);
     })
     it('union', ()=>{
       let h = new Heap([1,2,3]);
@@ -104,9 +107,8 @@ describe('Heap', () => {
     })
     it('sift-down', ()=>{
 
-    });
+    })
   });
-
   // describe('', ()=>{
   //   it('has a constructor', ()=>{
   //   });

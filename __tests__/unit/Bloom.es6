@@ -1,5 +1,5 @@
-jest.dontMock('');
-let Bloom = require('');
+// jest.dontMock('');
+// let Bloom = require('');
 
 xdescribe('Bloom', () => {
 
@@ -43,6 +43,7 @@ xdescribe('Bloom', () => {
   });
   describe('performance/memory tests', () => {
     it('...', ()=>{
+      
     });
   });
 
