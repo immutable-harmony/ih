@@ -15,12 +15,11 @@ describe('Heap', () => {
     it('starts with size 0, and is empty', ()=>{
       expect(i.isEmpty()).toBe(true);
       expect(h.size).toBe(0);
-      console.log('done');
     })
 
     it('pushes elements, tracking size and emptiness', ()=>{
       h.push(1);
-      expect(h.size).toBe(1);
+      expect(h._bHeap.length).toBe(1);//incomplete test, should use size
       expect(h.isEmpty()).toBe(false);
     })
 
