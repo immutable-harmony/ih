@@ -1,7 +1,7 @@
 jest.dontMock('');
 let UnionFind = require('');
 
-describe('UnionFind', () => {
+xdescribe('UnionFind', () => {
 
   describe('MakeSet', () => {
     it('Makes a set', ()=>{
@@ -16,7 +16,7 @@ describe('UnionFind', () => {
   });
 });
 
-describe('UnionFind Forest', () => {
+xdescribe('UnionFind Forest', () => {
   describe('MakeSet', () => {
     it('Makes a set', ()=>{
     });
