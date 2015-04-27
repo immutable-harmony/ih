@@ -6,7 +6,7 @@ jasmine.verbose = true;
 jest.dontMock('../../src/Heap.es6');
 let Heap = require('../../src/Heap.es6');
 
-describe('Heap', () => {
+xdescribe('Heap', () => {
 
   describe('basic instance methods', () => {
     let h = new Heap();
