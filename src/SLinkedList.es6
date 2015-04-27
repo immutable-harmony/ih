@@ -19,6 +19,10 @@ export default class SLinkedList {
     return this._lzStore.last() || null;
   }
 
+  get size() {
+    return this._lzStore.size;
+  }
+
   addToTail(valueOrNode) {
     let newList;
     if (this.tail) {
@@ -31,6 +35,14 @@ export default class SLinkedList {
 
   removeHead() {
     return new SLinkedList(this._lzStore.rest().toJS());
+  }
+
+  contains(target) {
+    return this._lzStore.contains(target);
+  }
+
+  eachNode(cb) {
+    this._lzStore.toArray().forEach(cb);
   }
 
   static generateLzStore(itemOrList) {

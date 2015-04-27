@@ -62,6 +62,16 @@ describe('SLinkedList', () => {
       expect(sLLArray.tail).toEqual({ name: 'anna' });
     });
 
+    it('gets-store', () => {
+      expect(sLLNumber.store.length).toEqual(1);
+      expect(sLLNumber.store[0]).toEqual(1);
+    });
+
+    it('gets-size', () => {
+      expect(sLLNumber.size).toEqual(1);
+      expect(sLLArray.size).toEqual(3);
+    });
+
     it('adds-to-tail', () => {
       let sLLNumber2 = sLLNumber.addToTail(2);
       expect(sLLNumber.tail).toEqual(1); // shouldn't mutate original list
@@ -78,6 +88,39 @@ describe('SLinkedList', () => {
       expect(sLLNumber3.head).toBeNull();
       expect(sLLNumber4.head).toEqual(2);
       expect(sLLNumber4.tail).toEqual(2);
+    });
+
+    it('contains', () => {
+      let emptyTest = new SLinkedList().contains('random'),
+          matchTest = new SLinkedList('random').contains('random'),
+          obj = {},
+          deepObj = { key1: 'key1' , testArr: ['first', 'second'] },
+          deepObj2 = { key1: 'key1' , testArr: ['first', 'second', 'third'], 'other key': 3 },
+          arr = [1, 2, 3, 4, 'test', {}],
+          matchTest2 = new SLinkedList(obj).contains(obj),
+          matchTest3 = new SLinkedList(deepObj).contains(deepObj),
+          matchTest4 = new SLinkedList(deepObj).contains(deepObj2),
+          matchTest5 = new SLinkedList(arr).contains('test'),
+          matchTest6 = new SLinkedList(arr).contains({});
+      expect(emptyTest).toEqual(false);
+      expect(matchTest).toEqual(true);
+      expect(matchTest2).toEqual(true);
+      expect(matchTest3).toEqual(true);
+      expect(matchTest4).toEqual(false);
+      expect(matchTest5).toEqual(true);
+      expect(matchTest6).toEqual(false);
+    });
+
+    it('each-nodes', () => {
+      let sLL = new SLinkedList([1, 2, 3]),
+          result = [],
+          cbAdd = (v) => result.push(v),
+          cbDel = (v) => result.pop();
+      expect(result.length).toEqual(0);
+      sLL.eachNode(cbAdd);
+      expect(result.length).toEqual(3);
+      sLL.eachNode(cbDel);
+      expect(result.length).toEqual(0);
     });
 
   });
