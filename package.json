@@ -6,7 +6,8 @@
   "author": {
     "name": "Immutable-Harmony"
   },
-  "contributors":[{
+  "contributors": [
+    {
       "name": "Clark Feusier",
       "email": "clark.feusier@hackreactor.com"
     },
@@ -14,7 +15,7 @@
       "name": "Sze-Hung Daniel Tsui",
       "email": "daniel.tsui@hackreactor.com"
     }
-    ],
+  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/immutable-harmony/ih.git"
@@ -22,34 +23,31 @@
   "bugs": {
     "url": "https://github.com/immutable-harmony/ih/issues"
   },
-  // "main": "dist/immutable.js",
-  // "scripts": {
-  //   "test": "./resources/node_test.sh",
-  //   "perf": "node ./resources/bench.js"
-  // },
-  // "jest": {
-  //   "scriptPreprocessor": "resources/jestPreprocessor.js",
-  //   "testFileExtensions": [
-  //     "js",
-  //     "ts"
-  //   ],
-  //   "persistModuleRegistryBetweenSpecs": true
-  // },
   "devDependencies": {
-    // "es6-transpiler": "^0.7.18",
-    // "6to5": "3.6.5",
-    "traceur": "0.0.88"
+    "babel": "^4.6.0",
+    "babel-jest": "*",
+    "core-js": "^0.6.0",
+    "immutable": "3.7.2",
+    "jest-cli": "^0.4.0"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "scriptPreprocessor": "node_modules/babel-jest",
+    "testFileExtensions": [
+      "es6",
+      "js"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "es6"
+    ]
   },
   "engines": {
     "node": ">=0.8.0"
   },
-  // "files": [
-  //   "dist",
-  //   "contrib",
-  //   "README.md",
-  //   "LICENSE",
-  //   "PATENTS"
-  // ],
   "keywords": [
     "immutable",
     "persistent",
